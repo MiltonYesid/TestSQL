@@ -1,0 +1,15 @@
+Select 
+f.id, d.Factura_id, d.Producto_id,f.fecha as 'FECHA DE FACTURA',f.iva as IVA, f.subTotal as SUBTOTAL,
+f.total as TOTAL ,c.nombre as 'NOMBRE DEL CLIENTE',
+c.rut AS RUT ,c.direccion as DIRECCION ,c.giro as 'GIRO',
+p.nombre as 'NOMBRE DEL PRODUCTO',p.precio as 'PRECIO DEL PRODUCTO',
+p.descripcion as 'DESCRIPCIÓN DEL PRODUCTO' 
+from factura as f, cliente as c, detalle as d, producto as p
+where 
+f.id = 25
+and 
+f.Cliente_id = c.id
+and 
+d.Factura_id = f.id
+and
+d.Producto_id = p.id
