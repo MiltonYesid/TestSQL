@@ -1,0 +1,6 @@
+SELECT nombre, id, precio,fechaCreacion,descripcion
+FROM producto
+WHERE id NOT IN (
+  SELECT Producto_id
+  FROM detalle 
+)
